@@ -2,7 +2,7 @@
 import { signIn, signOut, useSession, SessionProvider } from "next-auth/react";
 import { Appbar } from "../../../packages/ui/src/appbar";
 
-export default function Page(): JSX.Element {
+export default function Page(): JSX.Element   {
   return (
     <SessionProvider>
       <Content />
