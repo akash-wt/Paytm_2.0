@@ -10,6 +10,9 @@
     "exports": {
         "./client": "./index.ts"
     },
+     "scripts": {
+        "build": "npx prisma generate"
+    },
     "prisma": {
         "seed": "ts-node prisma/seed.ts"
     }
