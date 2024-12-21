@@ -39,9 +39,9 @@ jobs:
             sudo docker pull akashwt/myapp:latest
             sudo docker stop myapp || true
             sudo docker rm myapp || true
-            sudo docker run -d --name myapp -p 3005:3000 \
-            -e JWT_SECRET=kjcksfsajkfaodila \
-            -e NEXTAUTH_URL=http://localhost:3001 \
-            -e DATABASE_URL="postgresql://neondb_owner:Qj60AogDBaUq@ep-billowing-brook-a5ez1pcm-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require" \
-            --restart always \
-            akashwt/myapp:latest
+            sudo docker run -d --name myapp -p 3005:3001 \
+              -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
+              -e NEXTAUTH_URL=http://localhost:3001 \
+              -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
+              --restart always \
+              akashwt/myapp:latest
