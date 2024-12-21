@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./docker/Dockerfile.user
+          file: ./Docker/Dockerfile.user
           push: true
           tags: akashwt/myapp:latest
 
