@@ -13,4 +13,5 @@ RUN npm install
 # Build only the user-app
 RUN npm run build --filter=user-app
 
+
 CMD ["npm", "run", "start-user-app"]
