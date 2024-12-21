@@ -43,4 +43,5 @@ jobs:
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
               -e NEXTAUTH_URL=http://3.110.194.177:3005 \
               -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
-              --restart always \ akashwt/myapp:latest
+              --restart always \ 
+              akashwt/myapp:latest
