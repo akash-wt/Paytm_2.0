@@ -36,12 +36,17 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            # Ensure there's space available before proceeding
+            df -h
+            # Pull the latest image from Docker Hub
             sudo docker pull akashwt/myapp:latest
+            # Stop and remove any existing container with the same name
             sudo docker stop myapp || true
             sudo docker rm myapp || true
+            # Run the new container with the correct ports and environment variables
             sudo docker run -d --name myapp -p 3005:3000 \
               -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
               -e NEXTAUTH_URL=http://3.110.194.177:3005 \
               -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
-              --restart always \ 
+              --restart always \
               akashwt/myapp:latest
