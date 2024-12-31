@@ -2,8 +2,8 @@
   "name": "week-18",
   "private": true,
   "scripts": {
-    "build": "npx prisma generate && next build",
-    "postinstall": "npx prisma generate",
+    "build": "cd ./apps/user-app && npx prisma generate --schema=../../packages/db/prisma/schema.prisma && next build",
+    "postinstall": "npx prisma generate --schema=packages/db/prisma/schema.prisma",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
