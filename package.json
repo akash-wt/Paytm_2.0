@@ -2,12 +2,12 @@
   "name": "week-18",
   "private": true,
   "scripts": {
-    "build": "prisma generate && next build",
+    "build": "npx prisma generate && next build",
+    "postinstall": "npx prisma generate",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "start-user-app": "cd ./apps/user-app && npm run start"
-    
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
