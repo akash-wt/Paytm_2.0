@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "apps/user-app/package.json",
+        "use": "@vercel/next"
+      },
+      {
+        "src": "apps/merchat-app/package.json",
+        "use": "@vercel/node"
+      }
+    ],
+    "cleanUrls": true
+  }
+  
