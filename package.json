@@ -13,6 +13,7 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "prettier": "^3.2.5",
+    "prisma": "^6.5.0",
     "turbo": "latest"
   },
   "engines": {
@@ -22,5 +23,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  }
 }
