@@ -2,11 +2,7 @@ https://github.com/user-attachments/assets/93a3ca28-49cd-4810-a7e1-2103f9775361
 - Clone the repo
 
 ```jsx
-git clon
-
-
-
-e https://github.com/100xdevs-cohort-2/week-17-final-code
+git clone https://github.com/100xdevs-cohort-2/week-17-final-code
 ```
 
 - npm install
